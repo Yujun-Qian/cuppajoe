@@ -1,0 +1,42 @@
+{
+    "shared": {
+        "notification_email": "albertoc@yahoo-inc.com,cuppajoe-devel@yahoo-inc.com",
+        "build": {
+            "test": {
+                "yui_coverage": false
+            }
+        },
+        "compilers": {
+            "updateversion": {
+                "compiler": "updateversion"
+            },
+            "shaker": {
+                "compiler": "local:shaker",
+                "config": { }
+            }
+        }
+    },
+    "jobs": {
+        "local": {
+            "build": {
+                "custom": {
+                    "compile_commands": [
+                        "shaker"
+                    ]
+                }
+            }
+        },
+        "component": {
+            "build": {
+                "custom": {
+                    "compile_commands": [
+                        "shaker",
+                        "updateversion"
+                    ]
+                }
+            },
+            "triggers": [ ]
+        }
+    },
+    "version": 2
+}

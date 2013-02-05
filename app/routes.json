@@ -1,0 +1,57 @@
+[
+    {
+        "settings": [ "master" ],
+
+        "default": {
+            "path": "/",
+            "call": "yahoo_hybrid_app_specs.index"
+        },
+
+        "topics": {
+            "path": "/topics",
+            "call": "yahoo_hybrid_app_specs.index",
+            "params": {
+                "action": "selectTopics"
+            }
+        },
+
+        "topic_add_remove": {
+            "path": "/topics/:topic",
+            "call": "yahoo_hybrid_app_specs.index",
+            "params": {
+                "action": "selectTopics"
+            }
+        },
+
+        "web_app_index": {
+            "path": "/index.html",
+            "call": "yahoo_hybrid_app_specs.loader"
+        }
+    },
+    {
+        "settings": [ "environment:prod-native-ycrt" ],
+
+
+        "cuppajoe_hybrid_index": {
+            "path": "/yahoo.application.cuppajoe/index.html",
+            "call": "yahoo_hybrid_app_specs.loader"
+        },
+        "ycrt_index": {
+            "path": "/yahoo.application.mojito_app_hybrid_example/index.html",
+            "call": "yahoo.hybrid.app_specs.loader"
+        }
+    },
+    {
+        "settings": [ "environment:prod-webapp" ],
+
+        "default": {
+            "path": "/",
+            "call": "yahoo.hybrid.app_specs.loader"
+        },
+
+        "web_app_index": {
+            "path": "/index.html",
+            "call": "yahoo.hybrid.app_specs.loader"
+        }
+    }
+]

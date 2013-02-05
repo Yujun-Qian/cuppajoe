@@ -1,0 +1,14 @@
+[
+    {
+        "settings": [ "master" ],
+
+        "config": {
+            "assets": {
+                "top": {
+                    "css": [
+                    ]
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,9 @@
+{
+    "name": "yahoo.hybrid.app_user",
+    "version": "0.0.1",
+    "yahoo": {
+        "mojito": {
+            "version": "*"
+        }
+    }
+}

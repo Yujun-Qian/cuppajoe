@@ -1,0 +1,4 @@
+# Start the Mojito Server
+
+cd ./app
+./node_modules/.bin/mojito test app .

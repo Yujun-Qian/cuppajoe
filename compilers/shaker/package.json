@@ -1,0 +1,20 @@
+{
+    "name": "shaker-screwdriver",
+    "description": "Shaker compiler for Screwdriver",
+    "version": "0.0.1",
+    "contributors": [{
+        "name": "Nobody",
+        "email": "nobody@yahoo-inc.com"
+    }],
+    "dependencies": {
+    },
+    "engines": {
+        "node": ">= 0.4.2 < 0.5.0"
+    },
+    "yahoo": {
+        "bugzilla": {
+            "product": "mps",
+            "component": "cuppajoe"
+        }
+    }
+}

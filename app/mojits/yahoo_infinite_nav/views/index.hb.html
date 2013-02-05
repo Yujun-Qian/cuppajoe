@@ -1,0 +1,18 @@
+<div id="{{mojit_view_id}}" class="main">
+	<div class="hd">
+		{{#if selectTopics}}
+		<a href="/" class="toggle-selectors">Done</a>
+		{{else}}
+		<a href="/topics" class="toggle-selectors showwithjs">Topics</a>
+		{{/if}}
+	</div>
+	<div class="bd">
+		{{{feed}}}
+	</div>
+	<div class="reload-popup">
+		<div class="msg">
+			<h2>Refresh your cup.</h2>
+			<a href="./index.html">yes</a> or <a href="#no">no</a>
+		</div>
+	</div>
+</div>

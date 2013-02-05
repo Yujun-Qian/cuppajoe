@@ -1,0 +1,110 @@
+[
+    {
+        "settings": [ "master" ],
+
+        "-shareYUIInstance": true,
+
+        "-staticHandling": {
+            "prefix": "static",
+            "appName": "yahoo.hybrid.app",
+            "frameworkName": "yahoo.hybrid.mojito"
+        },
+        "staticHandling": {
+            "appName": "yahoo.application.cuppajoe",
+            "prefix": "yahoo.application.cuppajoe"
+        },
+        "yui": {
+            "debug": false,
+            "logLevel": "error",
+            "fetchCSS": false
+        },
+        "shaker": {
+            "task": "local",
+            "minify": true,
+            "rollupConfig": {
+                "bundleBinders": true,
+                "bundleViews": false,
+                "bundleController": true
+            },
+            "routeBundle": {
+                "default": [
+                    "yahoo_infinite_nav",
+                    "yahoo_infinitiefeed"
+                ],
+                "web_app_index": [
+                    "yahoo_infinite_nav",
+                    "yahoo_infinitiefeed"
+                ],
+                "cuppajoe_hybrid_index": [
+                    "yahoo_infinite_nav",
+                    "yahoo_infinitiefeed"
+                ]
+            }
+        }
+    },
+    {
+        "settings": [ "environment:prod-native" ],
+
+        "yui": {
+            "dependencyCalculations" : "ondemand",
+            "base": "/$$staticHandling.prefix$$/yahoo.libs.yui/assets/",
+            "url": "$$yui.base$$yui/yui-min.js",
+            "loader": "loader/loader-min.js"
+        }
+    },
+    {
+        "settings": [
+            "environment:prod-native-ycrt"
+        ],
+        "builds": {
+            "hybridapp": {
+                "forceRelativePaths": false,
+                "urls": [
+                    "/yahoo.application.cuppajoe/index.html"
+                ],
+                "packages": {
+                    "yahoo.libs.yui": "3.4.1"
+                }
+            },
+            "html5app": {
+                "urls": [
+                    "/yahoo.application.cuppajoe/index.html"
+                ]
+            }
+        },
+        "yui": {
+            "config": {
+                "seed": [
+                    "/yahoo.libs.yui/yui-base/yui-base-min.js",
+                    "/yahoo.libs.yui/loader-base/loader-base-min.js",
+                    "loader-yui3-resolved{langPath}",
+                    "loader-app",
+                    "loader-app-resolved{langPath}"
+                ],
+                "base": "/yahoo.libs.yui/",
+                "combine": false,
+                "root": "",
+                "groups": {
+                    "app": {
+                        "combine": false,
+                        "base": "//yahoo.com",
+                        "root": ""
+                    }
+                }
+            }
+        }
+    },
+    {
+        "settings": [ "environment:prod-webapp" ],
+
+        "builds": {
+            "html5app": {
+                "forceRelativePaths": true
+            }
+        }
+    },
+    {
+        "settings": [ "bucket:1234" ],
+        "selector": "1234"
+    }
+]

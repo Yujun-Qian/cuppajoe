@@ -1,0 +1,26 @@
+{{#items}}<li class="yui3-u">
+    <div class="card">
+        <div class="story">
+            {{#if imgSrc}}
+            <span class="story-image"><img src="{{imgSrc}}" alt="{{title}}"></span>
+            {{/if}}
+            <!--
+            FB Makes the CSS jump about. Need to find out why?
+            <div class="fb-like">
+                <fb:like data-href="{{url}}" send="false" layout="button_count" width="100" show_faces="false" action="recommend" font="lucida grande"></fb:like>
+            </div>
+            -->
+            <blockquote>
+                <h3>
+                    <!-- <a href="{{url}}" alt="{{title}}" target="_open">{{title}}</a> -->
+                    {{title}}
+                </h3>
+                <p class="body">
+                    {{body}}
+                </p>
+                <cite>{{date}} - <em class="category">{{group}}</em></cite> 
+            </blockquote>
+        </div>
+        <div class="tools"><a href="{{url}}" class="www" alt="{{title}}" target="_open">Read the full story</a></div>
+    </div>
+</li>{{/items}}

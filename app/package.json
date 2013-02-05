@@ -1,0 +1,39 @@
+{
+    "name": "yahoo.application.cuppajoe",
+    "description": "Mojito CuppaJoe Application",
+    "version": "0.0.1-47",
+    "author": {
+        "name": "Ric Allinson",
+        "email": "allinson@yahoo-inc.com"
+    },
+    "contributors": [],
+    "type": "application",
+    "pkg_type": "application",
+    "dependencies": {
+        "mojito": "0.5.2"
+    },
+    "devDependencies": {
+        "mojito-shaker": "3.0.0",
+        "jslint": "*"
+    },
+    "engines": {
+        "node": ">= 0.6.0 < 0.9.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@git.corp.yahoo.com:mps-demo/cuppajoe.git"
+    },
+    "scripts": {
+        "start": "./node_modules/mojito/bin/mojito start"
+    },
+    "yahoo": {
+        "bugzilla": {
+            "product": "Demo",
+            "component": "Demo"
+        },
+        "custodian": {
+            "email": "nobody@yahoo-inc.com",
+            "url": "http://www.yahoo.com"
+        }
+    }
+}
